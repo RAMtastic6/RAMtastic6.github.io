@@ -1,0 +1,107 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: bold;
+    background-color: #1a222c;
+    color: #EEE;
+    /* set text color to white */
+}
+
+a,
+:link {
+    color: #2196f3;
+    font-weight: bold;
+}
+
+
+/*
+HEADER
+*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: #7a7c7a;
+    color: #EEE;
+}
+
+nav a {
+    color: #EEE;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    color: #AAA;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul p {
+    margin: 0;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+/*
+TITOLO
+*/
+
+h1 {
+    color: #EEE;
+    margin-left: 10%;
+
+}
+
+/*
+SECTION
+*/
+
+section {
+    border: 0.2em solid #333;
+    border-radius: 30px;
+    background-color: #232d39;
+
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    padding-left: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    font-size: large;
+}
+
+#info-finali {
+    text-align: center;
+    font-size: 0.7em;
+    color: gray;
+}
+
+/*
+H2
+*/
+
+h2 {
+    margin-bottom: 20px;
+}
