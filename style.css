@@ -109,3 +109,43 @@ H2
 h2 {
     margin-bottom: 20px;
 }
+
+/*
+MOBILE
+*/
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        padding: 0.5rem;
+        width: auto;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    section {
+        padding: 0.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: auto;
+        width: 100%;
+        font-size: 1.5em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+      
+    }
+
+    h1 {
+        font-size: 1.5em;
+        line-height: 1em;
+    }
+}
