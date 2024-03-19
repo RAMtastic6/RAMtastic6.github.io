@@ -13,8 +13,14 @@ def getFilesInDir(dir_path: str) -> list[str]:
     dir_path := path della cartella nella quale cercare i file; 
     il path deve essere formattato in modo da contenere uno slash alla fine di esso
     """
-    files = [f for f in os.listdir(dir_path) if os.path.isfile(dir_path + f)]
-    return files 
+    dir_path = dir_path.replace("\\", "/")
+    
+    if not os.path.exists(dir_path):
+        print(f"Directory {dir_path} does not exist.")
+        return []
+    
+    files = [f for f in os.listdir(dir_path) if os.path.isfile(os.path.join(dir_path, f))]
+    return files
 
 # aggiunge una stringa al file senza sovrascriverlo
 # file_path: string

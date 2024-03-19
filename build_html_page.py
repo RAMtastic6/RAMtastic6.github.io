@@ -89,19 +89,19 @@ def buildFrom(path):
         id_string = str.lower(p).replace("-", "")
         id_string = ''.join(filter(lambda x: not x.isdigit(), id_string))
         dump += openSection(id_string)
-        dump += open_h2(id_string)
+        dump += open_h2(id_string.upper() if id_string=="rtb" or id_string=="pb" else id_string.capitalize())
         dump += ref_documents
-        dump += open_h3("VERBALI")
+        dump += open_h3("Verbali")
 
         # prendere lista verbali interni e formattare link
-        dump += openDetails("interni")
+        dump += openDetails("Interni")
         dump += openList()
         dump += ref_VIP 
         dump += closeList()
         dump += closeDetails()
 
         # prendere lista verbali esterni e formattare link
-        dump += openDetails("esterni")
+        dump += openDetails("Esterni")
         dump += openList()
         dump += ref_VEP 
         dump += closeList()
