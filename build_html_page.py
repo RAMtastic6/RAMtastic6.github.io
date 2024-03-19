@@ -63,6 +63,12 @@ footer = """
 </body>
 """
 # da questo punto, iniziano i vari periodi
+
+## lista di documenti esterni per le sezioni RTB e PB
+nomi_docs_esterni = ["Analisi_dei_Requisiti", "Piano_di_Qualifica", "Piano_di_Progetto", "Glossario"]
+
+## lista di documenti interni per le sezioni RTB e PB
+nomi_docs_interni = ["Norme_di_Progetto"]
  
 def buildFrom(path):
     dump = ""
@@ -80,7 +86,21 @@ def buildFrom(path):
         verbali_interni_periodo.sort()
         verbali_esterni_periodo.sort()
 
+        # separare i documenti esterni e interni
+        documents_esterni = []
+        documents_interni = []
+        for d in documents:
+            if any(doc in d for doc in nomi_docs_esterni):
+                documents_esterni.append(d)
+            if any(doc in d for doc in nomi_docs_interni):
+                documents_interni.append(d)
+        # rimuovere i documenti esterni e interni dalla lista dei documenti
+        documents = [d for d in documents if d not in documents_esterni]
+        documents = [d for d in documents if d not in documents_interni]
+        
         # formattare i riferimenti
+        ref_documents_esterni = formatReferencesHTML(documents_esterni, path + "/" + p + "/")
+        ref_documents_interni = formatReferencesHTML(documents_interni, path + "/" + p + "/")
         ref_documents = formatReferencesHTML(documents, path + "/" + p + "/") # del primo non ne sono sicuro, in quanto non si apre una lista.
         ref_VIP = formatReferencesHTML(verbali_interni_periodo , path + "/" + p + "/verbali/verbali_interni/") 
         ref_VEP = formatReferencesHTML(verbali_esterni_periodo, path + "/" + p + "/verbali/verbali_esterni/") 
@@ -89,8 +109,15 @@ def buildFrom(path):
         id_string = str.lower(p).replace("-", "")
         id_string = ''.join(filter(lambda x: not x.isdigit(), id_string))
         dump += openSection(id_string)
-        dump += open_h2(id_string.upper() if id_string=="rtb" or id_string=="pb" else id_string.capitalize())
+        is_rtb_or_pb = id_string=="rtb" or id_string=="pb"
+        dump += open_h2(id_string.capitalize() if not is_rtb_or_pb else id_string.upper())
         dump += ref_documents
+        if is_rtb_or_pb:
+            dump += open_h3("Documenti Esterni")
+            dump += ref_documents_esterni
+            dump += open_h3("Documenti Interni")
+            dump += ref_documents_interni
+        
         dump += open_h3("Verbali")
 
         # prendere lista verbali interni e formattare link
