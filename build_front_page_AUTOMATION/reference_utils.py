@@ -58,10 +58,6 @@ def formatReferencesHTML(items: list[str] = [], path: str = "") -> str:
         nome_link = build_link_name(i)
         path_to_link = path + i
         item = buildHtmlLink(path_to_link, nome_link) 
-        c = checkForVersioning(i)
-        if c:
-            version_number = c.group()          
-            item += " (" + version_number + ")"
         item = buildListItem(item)
         s += item + "\n"
     return s
