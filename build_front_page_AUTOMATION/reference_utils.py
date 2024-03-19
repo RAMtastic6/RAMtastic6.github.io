@@ -27,6 +27,19 @@ def build_link_name(path: str = "") -> str:
     for e in ext:
         if e in link_name:
             link_name = link_name.replace(e, "")
+    
+    if "verbale" in link_name:
+        # estrai la data dal nome del file
+        date_match = re.search(r"\d{4}_\d{2}_\d{2}", link_name)
+        if date_match:
+            date_str = date_match.group()
+
+            # formatta la data nel formato desiderato
+            year, month, day = date_str.split("_")
+            formatted_date = f"{int(day)}/{month.capitalize()}/{year}"
+            
+            # sostituisci la data nel nome del link
+            link_name = formatted_date
 
     # separare gli elementi 
     link_items = link_name.split("_")
