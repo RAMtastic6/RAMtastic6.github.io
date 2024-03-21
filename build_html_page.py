@@ -61,6 +61,7 @@ footer = """
         <p>Sito creato da Riccardo Zaupa</p>
     </div>
 </body>
+</html>
 """
 # da questo punto, iniziano i vari periodi
 
@@ -80,9 +81,9 @@ def buildFrom(path):
     for p in periodi:
         # prendere i dati per ogni periodo
         local_path = os.getcwd()
-        documents = getFilesInDir(path + "/" + p + "/")
-        verbali_interni_periodo  = getFilesInDir(os.path.join(local_path, path, p , "verbali", "verbali_interni/"))
-        verbali_esterni_periodo  = getFilesInDir(os.path.join(local_path, path, p , "verbali", "verbali_esterni/")) 
+        documents = getFilesInDir(os.path.join(path, p ))
+        verbali_interni_periodo  = getFilesInDir(os.path.join(local_path, path, p , "verbali", "verbali_interni"))
+        verbali_esterni_periodo  = getFilesInDir(os.path.join(local_path, path, p , "verbali", "verbali_esterni")) 
         verbali_interni_periodo.sort()
         verbali_esterni_periodo.sort()
 
