@@ -1,3 +1,15 @@
+:root{
+    --colorBackground: #1a222c;
+    --colorText: #e1e1e1;
+    --colorBackgroundNav: #7a7c7a;
+    --colorLinkNav: #232d39;
+    --colorLinkHover: #AAA;
+    --colorLink: #2196f3;
+    --colorBorderSection: #333;
+    --colorBackgroundSection: #232d39;
+    --colorLinkSection: #2196f3;
+}
+
 body,
 html {
     margin: 0;
@@ -6,9 +18,8 @@ html {
     font-size: 1.2em;
     line-height: 1.5em;
     font-weight: bold;
-    background-color: #1a222c;
-    color: #EEE;
-    /* set text color to white */
+    background-color: var(--colorBackground);
+    color: var(--colorText);
 }
 
 a,
@@ -26,18 +37,17 @@ nav {
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    background-color: #7a7c7a;
-    color: #EEE;
+    background-color: var(--colorBackgroundNav);
 }
 
 nav a {
-    color: #EEE;
+    color: var(--colorLinkNav);
     text-decoration: none;
     padding: 0.5rem;
 }
 
 nav a:hover {
-    color: #AAA;
+    color: var(--colorLinkHover);
 }
 
 nav ul {
@@ -65,9 +75,7 @@ TITOLO
 */
 
 h1 {
-    color: #EEE;
     margin-left: 10%;
-
 }
 
 /*
@@ -75,9 +83,9 @@ SECTION
 */
 
 section {
-    border: 0.2em solid #333;
+    border: 0.2em solid var(--colorBorderSection);
     border-radius: 30px;
-    background-color: #232d39;
+    background-color: var(--colorBackgroundSection);
 
     margin-left: 10%;
     margin-right: 10%;
@@ -98,9 +106,30 @@ section {
 }
 
 section a {
-    color: #2196f3;
+    color: var(--colorLinkSection);
     text-decoration: none;
 }
+
+#membri{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0.8em;
+}
+
+#membri li{
+    background-color: #232d39;
+    text-align: center;
+    flex: 1 1 14em;
+    max-width: 11em;
+    padding: 0.8em;
+    margin: 0.8em 0.6em;
+    border-radius: 10px;
+    border: 2px outset var(--colorLinkSection);
+}
+
 
 /*
 H2

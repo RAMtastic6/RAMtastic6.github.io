@@ -37,11 +37,11 @@ intestazione = """<!DOCTYPE html>
 footer = """
 <section id="chi-siamo">
         <h2>Chi siamo</h2>
-        <p>Il gruppo RAMtastic6, gruppo 14 del progetto didattico di Ingegneria del Software, è composto da 6 studenti
+        <p>Il gruppo RAMtastic6, il numero 14 del progetto didattico di Ingegneria del Software, è composto da 6 studenti
             del corso di laurea triennale in Informatica dell'Università
             degli Studi di Padova.</p>
-        <p>Il gruppo è composto da:</p>
-        <ul>
+        <h3>I componenti</h3>
+        <ul id="membri">
             <li>Leonardo Basso</li>
             <li>Riccardo Zaupa</li>
             <li>Samuele Visentin</li>
@@ -49,6 +49,10 @@ footer = """
             <li>Filippo Tonietto</li>
             <li>Davide Brotto</li>
         </ul>
+    </section>
+    <section id="contatti">
+        <h2>Contatti</h2>
+        <p>Email: <a href="mailto:ramtastic6@gmail.com">ramtastic6@gmail.com</a></p>
         <p>Riferimenti:</p>
         <ul>
             <li><a href="https://github.com/RAMtastic6/Project14">Repository GitHub del gruppo riservato alla documentazione</a></li>
@@ -57,10 +61,6 @@ footer = """
             <li><a href="https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C3.pdf">Capitolato Easy Meal</a>
             </li>
         </ul>
-    </section>
-    <section id="contatti">
-        <h2>Contatti</h2>
-        <p>Email: <a href="mailto:ramtastic6@gmail.com">ramtastic6@gmail.com</a></p>
     </section>
     <div id="info-finali">
         <p>Ultimo aggiornamento: 19 Aprile 2024</p>
@@ -147,5 +147,5 @@ def buildFrom(path):
     return dump
 
 dump = buildFrom("documenti")
-f = open("index.html", "w")
+f = open("index.html", "w", encoding="utf-8")
 f.write(dump)
