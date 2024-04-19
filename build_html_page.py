@@ -10,13 +10,18 @@ intestazione = """<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAMtastic6</title>
+    <meta name="keywords" content="RAMtastic6, Ingegneria del Software, Università degli Studi di Padova, swe, unipd">
+    <meta name="description" content="Pagina di presentazione del gruppo RAMtastic6 per il progetto di Ingegneria del Software A.A. 2023/24">
+    <meta name="author" content="RAMtastic6">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo.png">
 </head> 
 <body>
     <header>
         <nav>
             <div id="logo">
                 <img src="img/logo.png" alt="Logo RAMtastic6">
+                <p>RAMtastic6</p>
             </div>
             <ul>
                 <li><a href="#candidatura">Candidatura</a></li>
@@ -27,7 +32,7 @@ intestazione = """<!DOCTYPE html>
             </ul>
         </nav>
     </header>
-    <h1>Documentazione del gruppo RAMtastic6</h1> 
+    <h1>Documentazione del gruppo</h1> 
 """
 footer = """
 <section id="chi-siamo">
@@ -46,7 +51,8 @@ footer = """
         </ul>
         <p>Riferimenti:</p>
         <ul>
-            <li><a href="https://github.com/RAMtastic6/Project14">Repository GitHub del gruppo</a></li>
+            <li><a href="https://github.com/RAMtastic6/Project14">Repository GitHub del gruppo riservato alla documentazione</a></li>
+            <li><a href="https://github.com/RAMtastic6/Proof-of-Concept">Repository GitHub del gruppo riservato al Proof of Concept</a></li>
             <li><a href="https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf">Regolamento del progetto</a></li>
             <li><a href="https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C3.pdf">Capitolato Easy Meal</a>
             </li>
@@ -57,7 +63,7 @@ footer = """
         <p>Email: <a href="mailto:ramtastic6@gmail.com">ramtastic6@gmail.com</a></p>
     </section>
     <div id="info-finali">
-        <p>Ultimo aggiornamento: 8 Marzo 2024</p>
+        <p>Ultimo aggiornamento: 19 Aprile 2024</p>
         <p>Sito creato da Riccardo Zaupa</p>
     </div>
 </body>
