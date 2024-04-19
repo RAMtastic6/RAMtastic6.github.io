@@ -7,7 +7,6 @@
     --colorLink: #2196f3;
     --colorBorderSection: #333;
     --colorBackgroundSection: #232d39;
-    --colorLinkSection: #2196f3;
 }
 
 body,
@@ -117,14 +116,12 @@ section hr {
 }
 
 section a {
-    color: var(--colorLinkSection);
-    text-decoration: none;
+    color: var(--colorLink);
 }
 
 #membri {
     list-style-type: none;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 0.8em;
@@ -138,7 +135,7 @@ section a {
     padding: 0.8em;
     margin: 0.8em 0.6em;
     border-radius: 10px;
-    border: 2px outset var(--colorLinkSection);
+    border: 2px outset var(--colorLink);
 }
 
 
