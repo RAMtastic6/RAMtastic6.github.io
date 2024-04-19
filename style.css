@@ -1,4 +1,4 @@
-:root{
+:root {
     --colorBackground: #1a222c;
     --colorText: #e1e1e1;
     --colorBackgroundNav: #7a7c7a;
@@ -99,6 +99,17 @@ section {
     font-size: large;
 }
 
+section h2 {
+    font-size: xx-large;
+}
+
+section hr {
+    border-radius: 5px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-right: 10%;
+}
+
 #info-finali {
     text-align: center;
     font-size: 0.7em;
@@ -110,7 +121,7 @@ section a {
     text-decoration: none;
 }
 
-#membri{
+#membri {
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -119,7 +130,7 @@ section a {
     margin-top: 0.8em;
 }
 
-#membri li{
+#membri li {
     background-color: #232d39;
     text-align: center;
     flex: 1 1 14em;
@@ -170,7 +181,7 @@ MOBILE
         font-size: 1.5em;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
-      
+
     }
 
     h1 {

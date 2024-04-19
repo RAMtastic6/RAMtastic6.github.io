@@ -37,6 +37,7 @@ intestazione = """<!DOCTYPE html>
 footer = """
 <section id="chi-siamo">
         <h2>Chi siamo</h2>
+        <hr>
         <p>Il gruppo RAMtastic6, il numero 14 del progetto didattico di Ingegneria del Software, è composto da 6 studenti
             del corso di laurea triennale in Informatica dell'Università
             degli Studi di Padova.</p>
@@ -52,6 +53,7 @@ footer = """
     </section>
     <section id="contatti">
         <h2>Contatti</h2>
+        <hr>
         <p>Email: <a href="mailto:ramtastic6@gmail.com">ramtastic6@gmail.com</a></p>
         <p>Riferimenti:</p>
         <ul>
@@ -118,6 +120,7 @@ def buildFrom(path):
         dump += openSection(id_string)
         is_rtb_or_pb = id_string=="rtb" or id_string=="pb"
         dump += open_h2(id_string.capitalize() if not is_rtb_or_pb else id_string.upper())
+        dump += "<hr>"
         dump += ref_documents
         if is_rtb_or_pb:
             dump += open_h3("Documenti Esterni")
