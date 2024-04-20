@@ -32,6 +32,7 @@ intestazione = """<!DOCTYPE html>
             </ul>
         </nav>
     </header>
+    <main>
     <h1>Documentazione del gruppo</h1> 
 """
 footer = """
@@ -64,10 +65,12 @@ footer = """
             </li>
         </ul>
     </section>
-    <div id="info-finali">
-        <p>Ultimo aggiornamento: 19 Aprile 2024</p>
-        <p>Sito creato da Riccardo Zaupa</p>
-    </div>
+    
+    </main>
+    <footer>
+    
+    <p>© <span lang="en">Copyright</span> 2024 RAMtastic6 - Tutti i diritti riservati</p>    
+    </footer>
 </body>
 </html>
 """

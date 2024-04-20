@@ -112,7 +112,6 @@ section hr {
 #info-finali {
     text-align: center;
     font-size: 0.7em;
-    color: gray;
 }
 
 section a {
@@ -147,6 +146,18 @@ h2 {
     margin-bottom: 20px;
 }
 
+/*
+FOOTER
+*/
+
+footer {
+    font-size: 0.8em;
+    background-color: var(--colorBackgroundNav);
+    color: var(--colorLinkNav);
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
 /*
 MOBILE
 */
