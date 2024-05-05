@@ -3,7 +3,7 @@
     --colorText: #e1e1e1;
     --colorBackgroundNav: #7a7c7a;
     --colorLinkNav: #232d39;
-    --colorLinkHover: #AAA;
+    --colorLinkHover: #d0d0d0;
     --colorLink: #2196f3;
     --colorBorderSection: #333;
     --colorBackgroundSection: #232d39;
@@ -41,11 +41,10 @@ nav {
 
 nav a {
     color: var(--colorLinkNav);
-    text-decoration: none;
     padding: 0.5rem;
 }
 
-nav a:hover {
+a:hover {
     color: var(--colorLinkHover);
 }
 
@@ -91,7 +90,8 @@ section {
     margin-top: 50px;
     margin-bottom: 50px;
 
-    padding-left: 5%;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     padding-top: 30px;
     padding-bottom: 30px;
 
@@ -121,17 +121,21 @@ section a {
 #membri {
     list-style-type: none;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     margin-top: 0.8em;
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
 }
+
 
 #membri li {
     background-color: #232d39;
+    margin: auto;
     text-align: center;
     flex: 1 1 14em;
     max-width: 11em;
-    padding: 0.8em;
+    padding: 0.5em;
     margin: 0.8em 0.6em;
     border-radius: 10px;
     border: 2px outset var(--colorLink);
@@ -161,7 +165,7 @@ footer {
 /*
 MOBILE
 */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     nav {
         flex-direction: column;
         padding: 0.5rem;
@@ -174,6 +178,8 @@ MOBILE
 
     section {
         padding: 0.5em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
     }
 
     nav ul {
@@ -186,7 +192,7 @@ MOBILE
         display: block;
         margin: auto;
         width: 100%;
-        font-size: 1.5em;
+        font-size: 1.2em;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
 

@@ -27,6 +27,7 @@ intestazione = """<!DOCTYPE html>
                 <li><a href="#candidatura">Candidatura</a></li>
                 <li><a href="#rtb">RTB</a></li>
                 <li><a href="#pb">PB</a></li>
+                <li><a href="https://github.com/orgs/RAMtastic6/repositories" target="_blank">GitHub</a></li>
                 <li><a href="#chi-siamo">Chi siamo</a></li>
                 <li><a href="#contatti">Contatti</a></li>
             </ul>
@@ -58,10 +59,10 @@ footer = """
         <p>Email: <a href="mailto:ramtastic6@gmail.com">ramtastic6@gmail.com</a></p>
         <p>Riferimenti:</p>
         <ul>
-            <li><a href="https://github.com/RAMtastic6/Project14">Repository GitHub del gruppo riservato alla documentazione</a></li>
-            <li><a href="https://github.com/RAMtastic6/Proof-of-Concept">Repository GitHub del gruppo riservato al Proof of Concept</a></li>
-            <li><a href="https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf">Regolamento del progetto</a></li>
-            <li><a href="https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C3.pdf">Capitolato Easy Meal</a>
+            <li><a href="https://github.com/RAMtastic6/Project14" target=\"_blank\">Repository GitHub del gruppo riservato alla documentazione</a></li>
+            <li><a href="https://github.com/RAMtastic6/Proof-of-Concept" target=\"_blank\">Repository GitHub del gruppo riservato al Proof of Concept</a></li>
+            <li><a href="https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf" target=\"_blank\">Regolamento del progetto</a></li>
+            <li><a href="https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C3.pdf" target=\"_blank\">Capitolato Easy Meal</a>
             </li>
         </ul>
     </section>
@@ -87,7 +88,7 @@ def buildFrom(path):
     dump += intestazione
 
     periodi = os.listdir(path) 
-    periodi.sort() # riordinare i periodi
+    periodi.sort(reverse=True) # invertire la lista dei periodi
 
     for p in periodi:
         # prendere i dati per ogni periodo
@@ -95,8 +96,8 @@ def buildFrom(path):
         documents = getFilesInDir(os.path.join(path, p ))
         verbali_interni_periodo  = getFilesInDir(os.path.join(local_path, path, p , "verbali", "verbali_interni"))
         verbali_esterni_periodo  = getFilesInDir(os.path.join(local_path, path, p , "verbali", "verbali_esterni")) 
-        verbali_interni_periodo.sort()
-        verbali_esterni_periodo.sort()
+        verbali_interni_periodo.sort(reverse=True)
+        verbali_esterni_periodo.sort(reverse=True)
 
         # separare i documenti esterni e interni
         documents_esterni = []

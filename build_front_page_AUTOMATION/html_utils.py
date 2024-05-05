@@ -20,7 +20,7 @@ def open_h3(string) -> str:
 
 def openDetails(string) -> str:
     """ apre una lista in HTML"""
-    open_list = "<details> \n <summary> {} </summary>\n".format(string)
+    open_list = "<details open=\"true\"> \n <summary> {} </summary>\n".format(string)
     return open_list
 
 def closeDetails() -> str: 
@@ -42,5 +42,5 @@ def buildListItem(string: str) -> str:
     return open_list
 
 def buildHtmlLink(path: str, nome_link: str) -> str:
-    link = "<a href=\"" + path + "\"> " + nome_link + " </a>"
+    link = "<a href=\"" + path + "\" target=\"_blank\"> " + nome_link + " </a>"
     return link

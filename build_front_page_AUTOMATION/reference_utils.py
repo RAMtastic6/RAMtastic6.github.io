@@ -36,10 +36,11 @@ def build_link_name(path: str = "") -> str:
 
             # formatta la data nel formato desiderato
             year, month, day = date_str.split("_")
-            formatted_date = f"{int(day)}/{month.capitalize()}/{year}"
+            formatted_date = f"Verbale&lowbar;{year}&lowbar;{month}&lowbar;{day}"
             
             # sostituisci la data nel nome del link
             link_name = formatted_date
+            return link_name
 
     # separare gli elementi 
     link_items = link_name.split("_")
