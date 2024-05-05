@@ -24,9 +24,9 @@ intestazione = """<!DOCTYPE html>
                 <p>RAMtastic6</p>
             </div>
             <ul>
-                <li><a href="#candidatura">Candidatura</a></li>
-                <li><a href="#rtb">RTB</a></li>
                 <li><a href="#pb">PB</a></li>
+                <li><a href="#rtb">RTB</a></li>
+                <li><a href="#candidatura">Candidatura</a></li>             
                 <li><a href="https://github.com/orgs/RAMtastic6/repositories" target="_blank">GitHub</a></li>
                 <li><a href="#chi-siamo">Chi siamo</a></li>
                 <li><a href="#contatti">Contatti</a></li>
