@@ -78,7 +78,7 @@ footer = """
 # da questo punto, iniziano i vari periodi
 
 ## lista di documenti esterni per le sezioni RTB e PB
-nomi_docs_esterni = ["Analisi_dei_Requisiti", "Piano_di_Qualifica", "Piano_di_Progetto", "Glossario"]
+nomi_docs_esterni = ["Analisi_dei_Requisiti", "Piano_di_Qualifica", "Piano_di_Progetto", "Glossario", "Manuale_Utente", "Specifica_Tecnica"]
 
 ## lista di documenti interni per le sezioni RTB e PB
 nomi_docs_interni = ["Norme_di_Progetto"]
